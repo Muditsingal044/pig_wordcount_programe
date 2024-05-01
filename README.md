@@ -5,14 +5,15 @@ WordCount Program:
 
 CMD ->
 1. cat>> wordcountPig.txt
+
 i am mudit
 i am human  (cTrl+Z)
 
-2. hadoop fs -mkdir /pig_data
-3. hadoop fs -put wordcountPig.txt /pig_data
+3. hadoop fs -mkdir /pig_data
+4. hadoop fs -put wordcountPig.txt /pig_data
 
-4. cd hive/bin
-5. pig
+5. cd hive/bin
+6. pig
 
 ## grunt > cmd .......
 ........................................
