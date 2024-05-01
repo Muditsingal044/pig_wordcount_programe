@@ -24,4 +24,7 @@ i am human  (cTrl+Z)
 3. grouped = GROUP words BY word;
 4. wordcount = FOREACH grouped GENERATE group, COUNT(words);
 5. STORE wordcount INTO 'wordcount_output' USING PigStorage(',');
-6. fs -cat /output_directory/part-r-00000
+6. fs -cat /wordcount_output/part-r-00000
+
+
+***************************************** THANKYOU ******************************************
