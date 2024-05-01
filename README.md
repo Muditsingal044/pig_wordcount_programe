@@ -13,9 +13,15 @@ i am human  (cTrl+Z)
 
 4. cd hive/bin
 5. pig
-   
-6. lines = LOAD 'hdfs://localhost:9000/pig_data/wordcountPig.txt' AS (line:chararray);
-7. words = FOREACH lines GENERATE FLATTEN(TOKENIZE(line)) as word;
-8. grouped = GROUP words BY word;
-9. wordcount = FOREACH grouped GENERATE group, COUNT(words);
-10. DUMP wordcount;
+
+## grunt > cmd .......
+........................................
+
+1. lines = LOAD 'hdfs://localhost:9000/pig_data/wordcountPig.txt' AS (line:chararray);
+
+
+2. words = FOREACH lines GENERATE FLATTEN(TOKENIZE(line)) as word;
+3. grouped = GROUP words BY word;
+4. wordcount = FOREACH grouped GENERATE group, COUNT(words);
+5. STORE wordcount INTO 'wordcount_output' USING PigStorage(',');
+6. fs -cat /output_directory/part-r-00000
