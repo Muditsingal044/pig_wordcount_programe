@@ -7,7 +7,9 @@ CMD ->
 1. cat>> wordcountPig.txt
 
 i am mudit
-i am human  (cTrl+Z)
+i am human
+(cTrl+Z)
+
 
 3. hadoop fs -mkdir /pig_data
 4. hadoop fs -put wordcountPig.txt /pig_data
