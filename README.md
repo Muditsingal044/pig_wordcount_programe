@@ -26,7 +26,7 @@ i am human
 2. words = FOREACH lines GENERATE FLATTEN(TOKENIZE(line)) as word;
 3. grouped = GROUP words BY word;
 4. wordcount = FOREACH grouped GENERATE group, COUNT(words);
-5. STORE wordcount INTO 'wordcount_output1' USING PigStorage(',');
+5. STORE wordcount INTO '/wordcount_output1' USING PigStorage(',');
 6. fs -cat /wordcount_output1/part-r-00000
 
 
